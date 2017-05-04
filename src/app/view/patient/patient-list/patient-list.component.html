@@ -1,0 +1,7 @@
+<h2>List</h2>
+<p
+  *ngFor="let patient of patientList"
+  class="clickable"
+  (click)="patientSelected(patient)">
+  {{patient.name}}
+</p>

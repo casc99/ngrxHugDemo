@@ -1,0 +1,9 @@
+app-patient-list {
+  flex: 1;
+  border-right: 1px solid grey;
+}
+
+app-patient-detail {
+  flex: 2;
+  padding-left: 1vw;
+}
