@@ -15,7 +15,7 @@ import { Ipatient } from '../../../model/patient/patient.interface';
 })
 export class PatientDetailComponent {
 
-  @Input() private patientSelected: Ipatient;
+  @Input() protected patientSelected: Ipatient;
 
   constructor(
     private _store: Store<IappState>,
