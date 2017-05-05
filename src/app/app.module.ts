@@ -1,7 +1,10 @@
 // core
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+// store
 import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 // component
 import { AppComponent } from './app.component';
@@ -13,6 +16,9 @@ import { PatientDetailComponent } from './view/patient/patient-detail/patient-de
 import { PatientService } from './service/common/patient.service';
 import { PatientApiService } from './service/api/patient-api.service';
 import { ExternalMockService } from './service/lib/external-mock.service';
+
+// effects
+import { MainEffects } from './service/effect/main.effects';
 
 // reducer
 import { patientReducer } from './model/patient/patient.reducer';
@@ -28,7 +34,9 @@ import { patientReducer } from './model/patient/patient.reducer';
     BrowserModule,
     StoreModule.provideStore({
       patient: patientReducer,
-    })
+    }),
+
+    EffectsModule.run(MainEffects)
   ],
   providers: [
     ExternalMockService,

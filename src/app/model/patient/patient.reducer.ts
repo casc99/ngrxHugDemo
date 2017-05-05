@@ -2,7 +2,7 @@ import { ActionReducer, Action } from '@ngrx/store';
 
 import { Ipatient } from './patient.interface';
 import {
-    LOAD_PATIENT,
+    LOAD_PATIENT_DEFAULT,
     PATIENT_SELECTED,
     UPDATE_PATIENT_NAME,
 } from '../action-name';
@@ -10,7 +10,8 @@ import {
 export function patientReducer(state: Ipatient[] = [], action: Action): Ipatient[] {
     switch (action.type) {
 
-        case LOAD_PATIENT:
+        case LOAD_PATIENT_DEFAULT:
+            console.log(action);
             return state.concat([action.payload]);
 
         case PATIENT_SELECTED:
