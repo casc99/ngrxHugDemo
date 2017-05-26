@@ -8,7 +8,7 @@ import { Ipatient } from '../../model/patient/patient.interface';
 import {
     LOAD_PATIENT,
     LOAD_PATIENT_DEFAULT,
-} from '../..//model/action-name';
+} from '../../model/action-name';
 
 @Injectable()
 export class MainEffects {
